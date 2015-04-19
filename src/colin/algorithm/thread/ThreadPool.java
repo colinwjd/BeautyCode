@@ -46,7 +46,7 @@ public final class ThreadPool {
 	}
 
 	public boolean addTask(Runnable task) {
-		return taskQueue.add(task);
+		return taskQueue.offer(task);
 	}
 
 	public boolean addTasks(Runnable[] tasks) {
@@ -97,5 +97,5 @@ public final class ThreadPool {
 		}
 
 	}
-
+	
 }
