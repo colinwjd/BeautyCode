@@ -3,8 +3,7 @@ package colin.algorithm.tree;
 import java.util.*;
 
 /**
- * 二叉树的遍历算法
- * Created by Colin Wang on 2015-04-12.
+ * 二叉树的遍历算法 Created by Colin Wang on 2015-04-12.
  */
 public class Order {
 
@@ -85,6 +84,17 @@ public class Order {
 		}
 	}
 
+	// 递归方式获取二叉树深度
+	public int treeDepth(Node<String> root) {
+		if (root == null) {
+			return 0;
+		}
+		int left = treeDepth(root.left);
+		int right = treeDepth(root.right);
+
+		return left > right ? left + 1 : right + 1;
+	}
+
 	public static void main(String[] args) {
 		Node<String> one = new Node();
 		one.e = "1";
@@ -104,6 +114,5 @@ public class Order {
 
 		Order order = new Order();
 		order.inOrder(one);
-
 	}
 }
