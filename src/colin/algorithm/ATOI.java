@@ -39,12 +39,13 @@ public class ATOI {
 	}
 
 	private static int strToInt(char[] chars, int start, boolean minus) {
-		int result = 0;
+		long result = 0;
 		for (int i = start; i < chars.length; i++) {
 			if (chars[i] >= '0' && chars[i] <= '9') {
 				int flag = minus ? -1 : 1;
 				result = result * 10 + flag * (chars[i] - '0');
 				if (!minus && result > 0x7FFFFFFF) {
+					System.out.println("colin");
 					return Integer.MAX_VALUE;
 				} else if (minus && result < 0x80000000) {
 					return Integer.MIN_VALUE;
@@ -54,14 +55,14 @@ public class ATOI {
 				return 0;
 			}
 		}
-		return result;
+		return (int) result;
 	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String string = "-00023";
+		String string = "2147483648";
 		System.out.println(atoi(string));
 		System.out.println(isValidInput);
 	}
