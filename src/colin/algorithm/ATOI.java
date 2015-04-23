@@ -45,7 +45,6 @@ public class ATOI {
 				int flag = minus ? -1 : 1;
 				result = result * 10 + flag * (chars[i] - '0');
 				if (!minus && result > 0x7FFFFFFF) {
-					System.out.println("colin");
 					return Integer.MAX_VALUE;
 				} else if (minus && result < 0x80000000) {
 					return Integer.MIN_VALUE;
