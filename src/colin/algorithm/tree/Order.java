@@ -96,15 +96,15 @@ public class Order {
 	}
 
 	public static void main(String[] args) {
-		Node<String> one = new Node();
+		Node<String> one = new Node<String>();
 		one.e = "1";
-		Node<String> two = new Node();
+		Node<String> two = new Node<String>();
 		two.e = "2";
-		Node<String> three = new Node();
+		Node<String> three = new Node<String>();
 		three.e = "3";
-		Node<String> six = new Node();
+		Node<String> six = new Node<String>();
 		six.e = "6";
-		Node<String> seven = new Node();
+		Node<String> seven = new Node<String>();
 		seven.e = "7";
 
 		one.left = two;
