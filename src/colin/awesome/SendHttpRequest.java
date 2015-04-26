@@ -16,6 +16,7 @@ public class SendHttpRequest {
 			while ((str = br.readLine()) != null) {
 				System.out.println(str);
 			}
+
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
